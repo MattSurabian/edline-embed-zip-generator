@@ -10,16 +10,16 @@
 <body>
 
 <div class="row">
-    <div class="large-12 large-centered columns">
+    <div class="text-center columns">
         <h1>Edline Embed Zip Generator</h1>
     </div>
-
-
-    <div class="large-12 large-centered columns">
+</div>
+<div class="row">
+    <div class="columns">
         Submitting this form will create a .zip file and download it to your computer. It is a zip compressed <a href="https://gist.github.com/MattSurabian/db95ee2de70fd9ce03a0" target="_blank">index.html file</a> (as required by Edline) which takes the code pasted in the form below and inserts it into the body of the page. While creating and serving the zip archive, a temporary copy is stored on this server with a unique filename. As soon as the file has been sent to your machine, the temporary copy is destroyed. <a href="https://github.com/MattSurabian/edline-embed-zip-generator" target="_blank">The code powering this is available for review here.</a><br/><br/>
     </div>
 
-    <div class="large-12 columns">
+    <div class="columns">
         <form method="post" action="zipGenerator.php" data-abide>
             <textarea id="embed_content" name="embed_content" rows=10 placeholder="Paste embed code here" data-abide-validator="body_content_only" required ></textarea>
             <small class="error">This field should NOT be empty and should NOT include &lt;head&gt;, &lt;body&gt;, or &lt;html&gt; tags.</small>
