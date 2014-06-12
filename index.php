@@ -16,7 +16,7 @@
 </div>
 <div class="row">
     <div class="columns">
-        Submitting this form will create a .zip file and download it to your computer. It is a zip compressed <a href="https://gist.github.com/MattSurabian/db95ee2de70fd9ce03a0" target="_blank">index.html file</a> (as required by Edline) which takes the code pasted in the form below and inserts it into the body of the page. While creating and serving the zip archive, a temporary copy is stored on this server with a unique filename. As soon as the file has been sent to your machine, the temporary copy is destroyed. <a href="https://github.com/MattSurabian/edline-embed-zip-generator" target="_blank">The code powering this is available for review here.</a><br/><br/>
+        Submitting this form will create a .zip file and download it to your computer. It is a zip compressed <a href="https://gist.github.com/MattSurabian/db95ee2de70fd9ce03a0" target="_blank">index.html file</a> (as required by Edline) which takes the code pasted in the form below and inserts it into the body of the page. While creating and serving the zip archive, a temporary copy is stored on this server with a unique filename. As soon as the file has been sent to your machine, the temporary copy is destroyed. Because Edline is served over HTTPS this tool automatically changes the protocol of any resources linked in the below form from HTTP to HTTPS. This prevents insecure content errors from occurring when the page is loaded in Edline. <a href="https://github.com/MattSurabian/edline-embed-zip-generator" target="_blank">The code powering this tool is available for review here</a>.<br/><br/>
     </div>
 
     <div class="columns">
