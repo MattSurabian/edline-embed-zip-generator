@@ -3,9 +3,9 @@ $filename = '/tmp/edline-embed-'.uniqid(true).'.zip';
 $zip = new ZipArchive();
 
 // Build index.html in memory
-$content = '<!DOCTYPE html><html><head><title>Embeded Content</title><style>iframe{width: 800px;height:600px;}</style></head><body>';
+$content = "<!DOCTYPE html>\n<html>\n<head>\n<title>Embeded Content</title>\n<style>\niframe{width:800px;height:600px;}\n</style>\n</head>\n<body>\n";
 $content .= $_POST['embed_content'];
-$content .= '</body></html>';
+$content .= "\n</body>\n</html>";
 
 // create the zip archive and add index.html into it
 $zip->open($filename, ZipArchive::CREATE);
