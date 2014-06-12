@@ -16,7 +16,7 @@
 
 
     <div class="large-12 large-centered columns">
-        Submitting this form will create a .zip file and download it to your computer. It is a zip compressed <a href="https://gist.github.com/MattSurabian/db95ee2de70fd9ce03a0" target="_blank">index.html file</a> (as required by Edline) which takes the code pasted in the form below and inserts it into the body of the page. The file provided to the user for download is created entirely in memory and is not stored by our server. <a href="https://github.com/MattSurabian/edline-embed-zip-generator">The code powering this is available for review here.</a><br/><br/>
+        Submitting this form will create a .zip file and download it to your computer. It is a zip compressed <a href="https://gist.github.com/MattSurabian/db95ee2de70fd9ce03a0" target="_blank">index.html file</a> (as required by Edline) which takes the code pasted in the form below and inserts it into the body of the page. While creating and serving the zip archive, a temporary copy is stored on this server with a unique filename. As soon as the file has been sent to your machine, the temporary copy is destroyed. <a href="https://github.com/MattSurabian/edline-embed-zip-generator" target="_blank">The code powering this is available for review here.</a><br/><br/>
     </div>
 
     <div class="large-12 columns">
