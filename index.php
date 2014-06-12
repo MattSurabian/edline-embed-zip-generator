@@ -38,7 +38,7 @@
     $(document).foundation({
         abide : {
             validators: {
-                body_content_only: function(el, required, parent) {
+                body_content_only: function(el, required) {
                     var illegal_tags = [ "head", "body", "html"];
                     var val = $(el).val();
 
@@ -46,11 +46,21 @@
                         return false;
                     }
 
-                    return illegal_tags.every(function(tag, index) {
+                    // cross browser Array.every
+                    var illegal_tags_in_use = false;
+                    var max = illegal_tags.length;
+                    for (var i=0; i<max; i++){
+                        var tag = illegal_tags[i];
                         var openTag = "<" + tag + ">";
                         var closeTag = "</" + tag + ">";
-                        return !(val.indexOf(openTag) > 0 || val.indexOf(closeTag) > 0);
-                    });
+
+                        illegal_tags_in_use = (val.indexOf(openTag) >= 0 || val.indexOf(closeTag) >= 0);
+                        if (illegal_tags_in_use) {
+                            return;
+                        }
+                    }
+
+                    return !illegal_tags_in_use; // this is a validator, return opposite
                 }
             }
         }
