@@ -4,7 +4,8 @@ $zip = new ZipArchive();
 
 // Build index.html in memory
 $content = "<!DOCTYPE html>\n<html>\n<head>\n<title>Embeded Content</title>\n<style>\niframe{width:800px;height:600px;}\n</style>\n</head>\n<body>\n";
-$content .= $_POST['embed_content'];
+// Edline is HTTPS, should try to load iframe content over HTTPS otherwise insecure errors prevent loading
+$content .= str_replace('="http://', '="https://', $_POST['embed_content']);
 $content .= "\n</body>\n</html>";
 
 // create the zip archive and add index.html into it
